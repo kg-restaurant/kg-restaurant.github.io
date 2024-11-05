@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King's Grill</title>
+    <link rel="icon" href="./res/img/logo.png" type="image/png"> 
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <script src="./config.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./res/img/logo.png" alt="King's Grill Logo" style="height: 50px;"> <!-- Logo trong header -->
+                <div class="logo-text">
+                    <h1 id="logo-title">King's Grill</h1>
+                    <h2 id="logo-subtitle">RESTAURANT</h2>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home" id="home-link">Trang chủ</a></li>
+                    <li><a href="#menu" id="menu-link">Thực đơn</a></li>
+                    <li><a href="#gallery" id="gallery-link">Thư viện</a></li>
+                    <li><a href="#contact" id="contact-link">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button onclick="setLanguage('vi')">Tiếng Việt</button>
+                <button onclick="setLanguage('en')">English</button>
+                <button onclick="setLanguage('zh')">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cover Image -->
+    <section class="cover">
+        <h1 id="cover-title">King's Grill</h1>
+        <button class="book-now" id="book-now-button">Đặt bàn ngay</button>
+    </section>
+
+    <!-- Body Content -->
+    <main>
+        <section class="our-story">
+            <h2 class="sub-title" id="story-title">Our story</h2>
+            <h3 id="story-subtitle">Về King's Grill</h3>
+            <p id="story-content">Đoạn văn bản mẫu giới thiệu về nhà hàng...</p>
+            <img src="image1.jpg" alt="Our Story Image" class="story-image">
+        </section>
+
+        <section class="our-menu">
+            <h2 class="sub-title" id="menu-title">Our menu</h2>
+            <h3 id="menu-subtitle">Thực đơn</h3>
+            <p id="menu-content">Đoạn văn bản mẫu về thực đơn...</p>
+            <div class="menu-images">
+                <img src="image2.jpg" alt="Menu Image 1">
+                <img src="image3.jpg" alt="Menu Image 2">
+            </div>
+            <button class="explore-menu" id="explore-menu-button">Khám phá thực đơn</button>
+        </section>
+
+        <section class="our-dishes">
+            <h2 id="signature-dishes-title">Món signature</h2>
+            <div class="dish-images">
+                <img src="dish1.jpg" alt="Dish 1">
+                <img src="dish2.jpg" alt="Dish 2">
+                <img src="dish3.jpg" alt="Dish 3">
+                <img src="dish4.jpg" alt="Dish 4">
+                <img src="dish5.jpg" alt="Dish 5">
+            </div>
+        </section>
+
+        <section class="our-spaces">
+            <h2 id="space-title">Không gian</h2>
+            <p id="space-content">Đoạn văn bản mô tả không gian nhà hàng...</p>
+            <button class="view-gallery" id="view-gallery-button">Xem thư viện</button>
+            <div class="space-images">
+                <img src="space1.jpg" alt="Space Image 1">
+                <img src="space2.jpg" alt="Space Image 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3 id="footer-description-title">King's Grill Restaurant</h3>
+            <p id="footer-description-content">Đoạn mô tả ngắn về nhà hàng...</p>
+        </div>
+        <div class="footer-section">
+            <h3>Thông tin liên hệ</h3>
+            <p id="opening-hours">Thời gian hoạt động: 8AM - 10PM</p>
+            <p id="address">Địa chỉ: 34 Đường Hoàng Văn Thụ, Chánh Nghĩa, Thủ Dầu Một, Bình Dương</p>
+            <p id="phone">Số điện thoại: (123) 456-7890</p>
+            <p id="email">Email: contact@kingsgrill.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Bản đồ</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.831571415351!2d106.66207381168607!3d10.97608258914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d12ffdb33b65%3A0x25ca14f40f0af9f!2zS2luZ-KAmXMgR3JpbGw!5e0!3m2!1sen!2s!4v1730781398962!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+</body>
+</html>
