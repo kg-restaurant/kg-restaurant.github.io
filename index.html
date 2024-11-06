@@ -32,10 +32,10 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
+      <div class="col-5">
         <div class="logo">
           <img
-            src="./res/img/logo.png"
+            src="./img/logo.png"
             alt="King's Grill Logo"
             style="height: 50px"
           />
@@ -45,42 +45,106 @@
             <h2 id="logo-subtitle">RESTAURANT</h2>
           </div>
         </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="#home" id="home-link">Trang chủ</a></li>
-            <li><a href="#menu" id="menu-link">Thực đơn</a></li>
-            <li><a href="#gallery" id="gallery-link">Thư viện</a></li>
-            <li><a href="#contact" id="contact-link">Liên hệ</a></li>
-          </ul>
-        </nav>
-        <div class="language-selector">
-          <button onclick="setLanguage('vi')">Tiếng Việt</button>
-          <button onclick="setLanguage('en')">English</button>
-          <button onclick="setLanguage('zh')">中文</button>
+      </div>
+      <div class="col-3 menu">
+        <ul class="navigation">
+          <li>
+            <a href="#home" id="home-link" onclick="toggleMenu()">Trang chủ</a>
+          </li>
+          <li>
+            <a href="#menu" id="menu-link" onclick="toggleMenu()">Thực đơn</a>
+          </li>
+          <li>
+            <a href="#gallery" id="gallery-link" onclick="toggleMenu()"
+              >Thư viện</a
+            >
+          </li>
+          <li>
+            <a href="#contact" id="contact-link" onclick="toggleMenu()"
+              >Liên hệ</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <div class="dynalang">
+          <li><a href="#vi" onclick="setLanguage('vi')">Tiếng Việt</a></li>
+          <li><a href="#en" onclick="setLanguage('en')">English</a></li>
+          <li><a href="#tw" onclick="setLanguage('zh')">中文</a></li>
         </div>
       </div>
     </header>
     <!-- Body Content -->
     <main>
-        <div class="text-center" style="padding: 0px 5px 0px 5px;">
-            <div class="row">
-              <div class="col col-8">Toạ lạc tại trung tâm Thủ Dầu Một, Glow Beer Garden trở nên đặc biệt như một resort thu nhỏ giữa lòng thành phố.
+      <section class="banner" id="banner">
+        <div class="content">
+          <h2>Always choose good</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            perferendis assumenda vel, libero error ab, quaerat totam nesciunt
+            perspiciatis harum corrupti adipisci id eligendi a optio.
+          </p>
+          <a href="#" class="btn">Our Menu</a>
+        </div>
+      </section>
 
-                Là nơi kết nối những giá trị cuộc sống, thông qua các bữa ăn ngon đa dạng phong cánh ẩm thực từ Âu sang Á trong không gian mang phong cách Tropical Minimalist tươi mát hoà cùng chất hiện đại.</div>
-              <div class="col col-4"><img class="img-fluid" src="./res/img/image.jpg" alt="hinh anh"/></div>
-            </div>
-            <div class="row">
-                <div class="col col-4"><img class="img-fluid" src="./res/img/image.jpg" alt="hinh anh"/></div>
-              <div class="col col-8">THƯỞNG THỨC ẨM THỰC THUẦN Á, ÂU ĐẾN FUSION ĐỘC BẢN
-
-                Nguyên liệu tươi mới mỗi ngày được sáng tạo dưới đôi tay tài hoa của bếp trưởng Glow Beer Garden với kinh nghiệm hơn 15 năm trong ngành ẩm thực</div>
-            </div>
-            <div class="row">
-                <div class="col col-8">Lấy cảm hứng từ những vùng đất thuộc miền nhiệt đới, sử dụng màu xanh lá cây làm gam màu chủ đạo; kết hợp khéo léo với các màu sắc sinh động như vàng của bãi cát dài bất tận, nâu của gỗ, thân cây; cùng các chất liệu tự nhiên như: mây, ngói và lá cọ,…
-                    Tất cả hoà quyện với nhau trong không gian GLOW mang lại cảm giác thật sự thư thái nhưng vẫn đầy năng lượng tươi mới cuốn hút<br/> nơi chúng ta gác lại âu lo và kết nối những giá trị cuộc sống.</div>
-                <div class="col col-4"><img class="img-fluid" src="./res/img/image.jpg" alt="hinh anh"/></div>
+      <div class="text-center" style="padding: 0px 5px 0px 5px;color: whitesmoke;">
+        <div class="row">
+          <div class="col col-7">
+            Toạ lạc tại trung tâm Thủ Dầu Một, Glow Beer Garden trở nên đặc biệt
+            như một resort thu nhỏ giữa lòng thành phố. Là nơi kết nối những giá
+            trị cuộc sống, thông qua các bữa ăn ngon đa dạng phong cánh ẩm thực
+            từ Âu sang Á trong không gian mang phong cách Tropical Minimalist
+            tươi mát hoà cùng chất hiện đại.
+          </div>
+          <div class="col col-4">
+            <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-4">
+            <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+          </div>
+          <div class="col col-4">
+            THƯỞNG THỨC ẨM THỰC THUẦN Á, ÂU ĐẾN FUSION ĐỘC BẢN Nguyên liệu tươi
+            mới mỗi ngày được sáng tạo dưới đôi tay tài hoa của bếp trưởng Glow
+            Beer Garden với kinh nghiệm hơn 15 năm trong ngành ẩm thực
+          </div>
+          <div class="col col-4">
+            <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-8">
+            Lấy cảm hứng từ những vùng đất thuộc miền nhiệt đới, sử dụng màu
+            xanh lá cây làm gam màu chủ đạo; kết hợp khéo léo với các màu sắc
+            sinh động như vàng của bãi cát dài bất tận, nâu của gỗ, thân cây;
+            cùng các chất liệu tự nhiên như: mây, ngói và lá cọ,… Tất cả hoà
+            quyện với nhau trong không gian GLOW mang lại cảm giác thật sự thư
+            thái nhưng vẫn đầy năng lượng tươi mới cuốn hút<br />
+            nơi chúng ta gác lại âu lo và kết nối những giá trị cuộc sống.
+          </div>
+          <div class="col col-4">
+            <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-4">
+            <div>
+              <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+              <span>Lấy cảm hứng từ những vùng đất thuộc miền nhiệt đới, sử dụng màu
+                xanh lá cây làm gam màu chủ đạo;</span>
             </div>
           </div>
+          <div class="col col-lg-4">
+            <div>
+              <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+              <span>Lấy cảm hứng từ những vùng đất thuộc miền nhiệt đới, sử dụng màu
+                xanh lá cây làm gam màu chủ đạo;</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
@@ -109,5 +173,18 @@
         ></iframe>
       </div>
     </footer>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".menuToggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

@@ -1,24 +1,162 @@
+/*-------- Banner - Menubar ------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap');
+
+*
+{
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #272525;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s;
+    /* border: #f00000 1px solid; */
 }
 
-.navbar {
-    display: flex;
+header.sticky
+{
+    color: #fff;
+	background: #272525;
+	padding: 10px 60px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header .navigation
+{
+	display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+    /* border: #f00000 1px solid; */
 }
+header .dynalang
+{
+	display: flex;
+    /* border: #f00000 1px solid; */
+    justify-content: end;
+}
+
+header .navigation li
+{
+	list-style: none;
+}
+header .dynalang li
+{
+	list-style: none;
+	margin-left: 30px;
+}
+
+header .navigation li a
+{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+}
+
+header.sticky .navigation li a
+{
+	color: #ffffff;
+}
+header .dynalang li a
+{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+}
+
+header.sticky .dynalang li a
+{
+	color: #ffffff;
+}
+
+header .navigation li a:hover
+{
+	color: #ff0157;
+}
+header .dynalang li a:hover
+{
+	color: #ff0157;
+}
+
+
+
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	background: url(img/bg.jpg);
+	background-size: cover;
+}
+
+.banner .content
+{
+	max-width: 900px;
+	text-align: center;
+}
+
+.banner .content h2
+{
+	font-size: 5em;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.banner .content p
+{
+	font-size: 1em;
+	color: #fff;
+}
+
+
+.btn
+{
+	font-size: 1em;
+	color: #fff;
+	background: #ff0157;
+	display: inline-block;
+	padding: 10px 30px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	transition: 0.5s;
+}
+
+.btn:hover
+{
+	letter-spacing: 9px;
+}
+
 
 .logo {
     display: flex;
     align-items: center;
+    color:#f1f1f1
 }
 
 .logo-text {
@@ -92,7 +230,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: rgba(113,44,248, 0.25);
+    color: #ffffff;
 }
 
 .footer-section {
@@ -113,7 +252,9 @@ footer {
 .col{
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: rgb(113, 44, 249 / 10%);
+    display: flex;
+    align-items: center;
+    background-color: rgb(113, 44, 249 / 10%) !important;
     border: 1px solid rgba(113,44,248, 0.25);
 }
 
@@ -123,12 +264,25 @@ footer {
     border: #f00000 1px solid;
     display: flex;
 }
-.left{
-    height: 300px;
-    width: 300px;
-    background-color: antiquewhite;
-}
-.right{
-    flex: 3;
-    background-color: aquamarine;
+
+/*--------- Mobile screen ----------*/
+@media screen and (max-width: 440px)
+{
+	header.sticky
+	{
+		padding: 10px 20px;
+	}
+
+	.testimonials .content .box
+	{
+		margin: 10px;
+		padding: 20px;
+	}
+
+	.contactForm
+	{
+		padding: 35px 40px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
 }
