@@ -47,6 +47,63 @@ body {
     cursor: pointer;
 }
 
+
+
+.contactModal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(255, 255, 255, 0%);
+    z-index: 9999;
+    justify-content: center;
+    position: relative;
+}
+.contactModal-content {
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(211, 211, 211, 0.7); 
+    width: auto;
+    height: auto;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.option img:hover {
+    transform: scale(1.1);
+}
+
+.option.zalo {
+    color: #0084ff;
+}
+
+.option.messenger {
+    color: #0078ff;
+}
+
+
 header
 {
 	position: fixed;
@@ -163,7 +220,7 @@ header .dynalang li a:hover
 }
 
 
-.btnBooking
+/* .btnBooking
 {
 	font-size: 1em;
 	color: #fff;
@@ -182,7 +239,7 @@ header .dynalang li a:hover
 {
     color: #fff;
 	letter-spacing: 9px;
-}
+} */
 
 
 .logo {
@@ -480,6 +537,7 @@ footer {
 
 .footer-section h3 {
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .footer-section iframe {

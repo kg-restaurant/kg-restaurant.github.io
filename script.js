@@ -45,9 +45,14 @@ document.getElementById("menu-link").addEventListener("click", function (event) 
     document.querySelector("#menuModal iframe").src = url;
     document.getElementById("menuModal").style.display = "flex";
 });
-document.getElementById("btnCloseModal").addEventListener("click", function (event) {
-    closeModal();
+
+document.getElementById("btnBooking").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("contactModal").style.display = "flex";
+    const contactTitle = document.getElementById("contact-title");
+    contactTitle.textContent = languageData.contact.title[currentLang];
 });
+
 
 function openModal() {
     // document.getElementById('menuModal').style.display = 'block';
@@ -66,9 +71,20 @@ function openModal() {
     }
     header.classList.add("sticky");
 }
-function closeModal() {
+document.getElementById("CloseMenuModal").addEventListener("click", function (event) {
     document.getElementById('menuModal').style.display = 'none';
-}
+});
+document.getElementById("CloseContactModal").addEventListener("click", function (event) {
+    document.getElementById('contactModal').style.display = 'none';
+});
+
+
+const contactModal = document.getElementById('contactModal');
+window.addEventListener("click", function(event) {
+    if (event.target === contactModal) {
+        contactModal.style.display = "none";  
+    }
+});
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -95,11 +111,6 @@ window.addEventListener("scroll", function () {
         }
     }
   });
-
-  document.getElementById("btnBooking").addEventListener("click", function(event) {
-    event.preventDefault(); 
-    window.open("https://m.me/KGBINHDUONG", "_blank"); 
-});
 
 
 window.addEventListener("load", function() {
@@ -152,9 +163,9 @@ const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function() {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-active");
+    navbar?.classList.toggle("active");
+    overlay?.classList.toggle("active");
+    document.body?.classList.toggle("nav-active");
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
@@ -172,7 +183,8 @@ let lastScrollPos = 0;
 
 const hideHeader = function() {
     const isScrollBottom = lastScrollPos < window.scrollY;
-    if(header.classList === null){
+
+    if (header && header.classList) {
         if (isScrollBottom) {
             header.classList.add("hide");
         } else {
@@ -180,9 +192,7 @@ const hideHeader = function() {
         }
         lastScrollPos = window.scrollY;
     }
-    
-    
-}
+};
 
 window.addEventListener("scroll", function() {
     if (window.scrollY >= 50) {
