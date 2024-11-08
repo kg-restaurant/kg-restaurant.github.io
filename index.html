@@ -1,104 +1,228 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>King's Grill</title>
-    <link rel="icon" href="./res/img/logo.png" type="image/png"> 
-    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        
+    <link rel="icon" href="./res/img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Caramel">
     <script src="./script.js" defer></script>
     <script src="./config.js" defer></script>
 </head>
+<div id="menuModal" class="modal">
+    <div class="modal-content">
+        <iframe src="https://kingsgrill.vn" width="100%" height="100%" style="border: none;"></iframe>
+        <button class="close-modal" id="CloseMenuModal">✖</button>
+    </div>
+</div>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="./res/img/logo.png" alt="King's Grill Logo" style="height: 50px;"> <!-- Logo trong header -->
-                <div class="logo-text">
-                    <h1 id="logo-title">King's Grill</h1>
-                    <h2 id="logo-subtitle">RESTAURANT</h2>
+        <div class="col-5">
+            <div class="logo" style="padding-inline-start: 5%;">
+                <div style="display: block; justify-items: center; align-content: center;">
+                    <img src="./img/logo.png" alt="King's Grill Logo" style="display: block;height: 70px;" />
+                    <div id="logo-title"style="font-size: 25px; color: #ffce25;">KING's GRILL</div>
+                    <span id="logo-subtitle" style="padding-top: 50px; color: #ffce25; letter-spacing: 5px;">RESTAURANT</span>
                 </div>
             </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#home" id="home-link">Trang chủ</a></li>
-                    <li><a href="#menu" id="menu-link">Thực đơn</a></li>
-                    <li><a href="#gallery" id="gallery-link">Thư viện</a></li>
-                    <li><a href="#contact" id="contact-link">Liên hệ</a></li>
-                </ul>
-            </nav>
-            <div class="language-selector">
-                <button onclick="setLanguage('vi')">Tiếng Việt</button>
-                <button onclick="setLanguage('en')">English</button>
-                <button onclick="setLanguage('zh')">中文</button>
+        </div>
+        <div class="col-3 menu">
+            <ul class="navigation">
+                <li>
+                    <a href="#home" id="home-link" >Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#menu" id="menu-link">Thực đơn</a>
+                </li>
+                <li>
+                    <a href="#gallery" id="gallery-link" >Thư viện</a>
+                </li>
+                <li>
+                    <a href="#contact" id="contact-link" >Liên hệ</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+        
+        <div class="col-4">
+            <div class="dynalang">
+                <li><a href="#vi" onclick="setLanguage('vi')">Tiếng Việt</a></li>
+                <li><a href="#en" onclick="setLanguage('en')">English</a></li>
+                <li><a href="#tw" onclick="setLanguage('zh')">中文</a></li>
             </div>
         </div>
     </header>
-
-    <!-- Cover Image -->
-    <section class="cover">
-        <h1 id="cover-title">King's Grill</h1>
-        <button class="book-now" id="book-now-button">Đặt bàn ngay</button>
-    </section>
-
     <!-- Body Content -->
     <main>
-        <section class="our-story">
-            <h2 class="sub-title" id="story-title">Our story</h2>
-            <h3 id="story-subtitle">Về King's Grill</h3>
-            <p id="story-content">Đoạn văn bản mẫu giới thiệu về nhà hàng...</p>
-            <img src="image1.jpg" alt="Our Story Image" class="story-image">
-        </section>
-
-        <section class="our-menu">
-            <h2 class="sub-title" id="menu-title">Our menu</h2>
-            <h3 id="menu-subtitle">Thực đơn</h3>
-            <p id="menu-content">Đoạn văn bản mẫu về thực đơn...</p>
-            <div class="menu-images">
-                <img src="image2.jpg" alt="Menu Image 1">
-                <img src="image3.jpg" alt="Menu Image 2">
-            </div>
-            <button class="explore-menu" id="explore-menu-button">Khám phá thực đơn</button>
-        </section>
-
-        <section class="our-dishes">
-            <h2 id="signature-dishes-title">Món signature</h2>
-            <div class="dish-images">
-                <img src="dish1.jpg" alt="Dish 1">
-                <img src="dish2.jpg" alt="Dish 2">
-                <img src="dish3.jpg" alt="Dish 3">
-                <img src="dish4.jpg" alt="Dish 4">
-                <img src="dish5.jpg" alt="Dish 5">
-            </div>
-        </section>
-
-        <section class="our-spaces">
-            <h2 id="space-title">Không gian</h2>
-            <p id="space-content">Đoạn văn bản mô tả không gian nhà hàng...</p>
-            <button class="view-gallery" id="view-gallery-button">Xem thư viện</button>
-            <div class="space-images">
-                <img src="space1.jpg" alt="Space Image 1">
-                <img src="space2.jpg" alt="Space Image 2">
+        <section class="banner" id="banner">
+            <div class="content">
+                <h1 style="color: aliceblue;">"Mỗi món ngon là một câu chuyện"</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                    perferendis assumenda vel, libero error ab, quaerat totam nesciunt
+                    perspiciatis harum corrupti adipisci id eligendi a optio.
+                </p>
+                <!-- <a href="#" class="btn btn-secondary">
+                    <span class="text text-1">Đặt bàn</span>
+                    <span class="text text-2" aria-hidden="true">Đặt bàn</span>
+                </a> -->
+                <a href="#" class="btn" id="btnBooking">Đặt bàn</a>
+                <div class="contactModal" id="contactModal">
+                    <div class="contactModal-content">
+                        <div style="justify-items: flex-end;"><button class="close-closeModal" id="CloseContactModal" style="align-items: end;">✖</button></div>
+                        
+                        <h3 id="contact-title">Chọn ứng dụng để nhắn tin</h3>
+                        <div class="options">
+                            <a href="https://zalo.me/0336667301" target="_blank" class="option zalo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+                                <span>Zalo</span>
+                            </a>
+                            <a href="https://m.me/KGBINHDUONG" target="_blank" class="option messenger">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="Messenger">
+                                <span>Messenger</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        <section class="section about text-center" aria-labelledby="about-label" id="about">
+            <div class="container">
+
+                <div class="about-content">
+
+                    <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+
+                    <h2 class="headline-1 section-title" id="about-title">Về King's Grill</h2>
+
+                    <p class="section-text">
+                        Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has
+                        been the industrys standard dummy text ever since the when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book It has survived
+                        not only five centuries, but also the leap into.
+                    </p>
+
+                </div>
+
+                <figure class="about-banner">
+
+                    <img src="./img/cp.jpg" width="570" height="570" loading="lazy"
+                        alt="about banner" class="w-100" data-parallax-item data-parallax-speed="1" style="object-fit: cover;">
+
+                    <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+                        <img src="./img/img2.jpg" width="285" height="285" loading="lazy"
+                            alt="" class="w-100" style="object-fit: cover;">
+                    </div>
+
+                    <div class="abs-img abs-img-2 has-before">
+                        <img src="./img/badge-2.png" width="133" height="134" loading="lazy" alt="">
+                    </div>
+
+                </figure>
+                <img src="./img/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+                        class="shape shape-1 move-anim">
+                <img src="./img/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+                        class="shape shape-2 move-anim">
+
+                <!-- <img src="./img/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape"> -->
+
+            </div>
+        </section>
+        <div class="text-center" style="padding: 10px;color: whitesmoke;">
+            <div class="row">
+                <div class="col col-7">
+                    Toạ lạc tại trung tâm Thủ Dầu Một, Glow Beer Garden trở nên đặc biệt
+                    như một resort thu nhỏ giữa lòng thành phố. Là nơi kết nối những giá
+                    trị cuộc sống, thông qua các bữa ăn ngon đa dạng phong cánh ẩm thực
+                    từ Âu sang Á trong không gian mang phong cách Tropical Minimalist
+                    tươi mát hoà cùng chất hiện đại.
+                </div>
+                <div class="col col-4">
+                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-4">
+                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                </div>
+                <div class="col col-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum neque, consequuntur placeat eius molestias obcaecati molestiae id ducimus soluta? Soluta ea, molestias at sed exercitationem cupiditate deleniti quam aliquam! Distinctio.
+                </div>
+                <div class="col col-4">
+                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-8">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus veritatis illum, consectetur velit libero officia ad architecto reprehenderit unde sequi, veniam porro id delectus error adipisci exercitationem fugiat provident incidunt.<br />
+                    lorem ipsum dolor
+                </div>
+                <div class="col col-4">
+                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-4">
+                    <div>
+                        <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel accusantium rerum facere facilis rem adipisci placeat eveniet molestiae commodi..</span>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div>
+                        <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus tempore ullam eius blanditiis, facere quos, tempora quaerat libero nisi voluptatibus neque earum sunt! Et cumque eum laudantium deserunt doloribus eveniet!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="footer-section">
             <h3 id="footer-description-title">King's Grill Restaurant</h3>
-            <p id="footer-description-content">Đoạn mô tả ngắn về nhà hàng...</p>
+            <p id="footer-description-content">.........</p>
         </div>
         <div class="footer-section">
             <h3>Thông tin liên hệ</h3>
-            <p id="opening-hours">Thời gian hoạt động: 8AM - 10PM</p>
-            <p id="address">Địa chỉ: 34 Đường Hoàng Văn Thụ, Chánh Nghĩa, Thủ Dầu Một, Bình Dương</p>
-            <p id="phone">Số điện thoại: (123) 456-7890</p>
-            <p id="email">Email: contact@kingsgrill.com</p>
+            <p id="opening-hours">Thời gian hoạt động: 16PM - 0AM</p>
+            <p id="address">
+                Địa chỉ: 34 Đường Hoàng Văn Thụ, Chánh Nghĩa, Thủ Dầu Một, Bình Dương
+            </p>
+            <p id="phone">Số điện thoại: +84 907 010 424</p>
+            <p id="email">Email: booking@kingsgrill.vn</p>
         </div>
         <div class="footer-section">
             <h3>Bản đồ</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.831571415351!2d106.66207381168607!3d10.97608258914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d12ffdb33b65%3A0x25ca14f40f0af9f!2zS2luZ-KAmXMgR3JpbGw!5e0!3m2!1sen!2s!4v1730781398962!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.831571415351!2d106.66207381168607!3d10.97608258914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d12ffdb33b65%3A0x25ca14f40f0af9f!2zS2luZ-KAmXMgR3JpbGw!5e0!3m2!1sen!2s!4v1730781398962!5m2!1sen!2s"
+                width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </footer>
+    <script type="text/javascript">
+
+    </script><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
