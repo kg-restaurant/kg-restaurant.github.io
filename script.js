@@ -87,16 +87,22 @@ window.addEventListener("click", function(event) {
 });
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
+    
     header.classList.toggle("sticky", window.scrollY > 0);
     if (window.scrollY > 0) {
         const logo = header.querySelector(".logo");
         if (logo) {
-            logo.innerHTML = `<img src="./img/logo.png" alt="Full Logo" style="height: 50px;">
+            logo.innerHTML = `<img src="./img/logo.png" alt="Full Logo"">
                             <div class="logo-text">
                     <div id="logo-title"style="font-size: 25px; color: #E4C590;">KING's GRILL</div>
                     <span id="logo-subtitle" style="padding-top: 50px; color: #E4C590; letter-spacing: 6px; margin-top: -10px;">RESTAURANT</span>
                 </div>
                 </div>`;
+                if (window.innerWidth <= 767) { 
+                    logo.style.height = "40px"; 
+                } else {
+                    logo.style.height = "50px";
+                }
         }
     } else {
         const logo = header.querySelector(".logo");
