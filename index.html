@@ -1,227 +1,749 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King's Grill</title>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>King's Grill Restaurant - Amazing & Delicious Food</title>
+    <meta name="title" content="King's Grill Restaurant - Amazing & Delicious Food">
+    <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-        
-    <link rel="icon" href="./res/img/logo.png" type="image/png" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Caramel">
-    <script src="./script.js" defer></script>
-    <script src="./config.js" defer></script>
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
 </head>
-<div id="menuModal" class="modal">
-    <div class="modal-content">
-        <iframe src="https://kingsgrill.vn" width="100%" height="100%" style="border: none;"></iframe>
-        <button class="close-modal" id="CloseMenuModal">✖</button>
+
+<body id="top">
+
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preload" data-preaload>
+        <div class="circle"></div>
+        <p class="text">Grilli</p>
     </div>
-</div>
-<body>
-    <header>
-        <div id="lg-tt" class="col-2">
-            <div class="logo" style="padding-inline-start: 5%;">
-                <div style="display: block; justify-items: center; align-content: center;">
-                    <img src="./img/logo.png" alt="King's Grill Logo" style="display: block;height: 70px;" />
-                    <div id="logo-title"style="font-size: 25px; color: #ffce25;">KING's GRILL</div>
-                    <span id="logo-subtitle" style="padding-top: 50px; color: #ffce25; letter-spacing: 5px;">RESTAURANT</span>
+
+
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <iframe src="https://kingsgrill.vn" width="100%" height="100%" style="border: none;"></iframe>
+            <button class="close-modal" id="CloseMenuModal">✖</button>
+        </div>
+    </div>
+
+
+    <!-- 
+    - #TOP BAR
+  -->
+
+    <div class="topbar">
+        <div class="container">
+
+            <address class="topbar-item">
+                <div class="icon">
+                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
                 </div>
+
+                <span class="span">
+                    34 Hoàng Văn Thụ - Phường Chánh Nghĩa - Thành phố Thủ Dầu Một - Bình Dương
+                </span>
+            </address>
+
+            <div class="separator"></div>
+
+            <div class="topbar-item item-2">
+                <div class="icon">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">Hoạt động: Từ 16:00 đến 23:30 </span>
             </div>
+
+            <a href="tel:+11234567890" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">0336 667 301</span>
+            </a>
+
+            <div class="separator"></div>
+
+            <a href="mailto:booking@restaurant.com" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">booking@kingsgrill.vn</span>
+            </a>
+
         </div>
-        <div id="mn" class="col-4 menu">
-            <ul class="navigation">
-                <li>
-                    <a href="#home" id="home-link" >Trang chủ</a>
-                </li>
-                <li>
-                    <a href="#menu" id="menu-link">Thực đơn</a>
-                </li>
-                <li>
-                    <a href="#gallery" id="gallery-link" >Thư viện</a>
-                </li>
-                <li>
-                    <a href="#contact" id="contact-link" >Liên hệ</a>
-                </li>
-            </ul>
-            
-        </div>
-        
-        
-        <div id="lang" class="col-4">
-            <div class="dynalang">
-                <li><a href="#vi" onclick="setLanguage('vi')">Tiếng Việt</a></li>
-                <li><a href="#en" onclick="setLanguage('en')">English</a></li>
-                <li><a href="#tw" onclick="setLanguage('zh')">中文</a></li>
-            </div>
+    </div>
+
+
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="logo">
+                    <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+                </a>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link hover-underline active">
+                            <div class="separator"></div>
+
+                            <span class="span">Trang chủ</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#menu" class="navbar-link hover-underline" id="menu-link">
+                            <div class="separator"></div>
+
+                            <span class="span">Thực đơn</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="navbar-item">
+                        <a href="#service" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Thư viện</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#about" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Về chúng tôi</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#contact" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Liên hệ</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="text-center">
+                    <p class="headline-1 navbar-title">Về chúng tôi</p>
+
+                    <address class="body-4">
+                        34 Hoàng Văn Thụ, Phường Chánh Nghĩa <br>
+                        Thành phố Thủ Dầu Một, Bình Dương
+                    </address>
+
+                    <p class="body-4 navbar-text">Mở cửa: Từ 16:00 đến 23:30</p>
+
+                    <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@kingsgrill.vn</a>
+
+                    <div class="separator"></div>
+
+                    <p class="contact-label">Đặt bàn</p>
+
+                    <a href="tel:+84336667301" class="body-1 contact-number hover-underline">
+                        +84-336 667 301
+                    </a>
+                </div>
+
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
         </div>
     </header>
-    <!-- Body Content -->
+
+
+
+
+
     <main>
-        <section class="banner" id="banner">
-            <div class="content">
-                <h1 style="color: aliceblue;">"Mỗi món ngon là một câu chuyện"</h1>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-                    perferendis assumenda vel, libero error ab, quaerat totam nesciunt
-                    perspiciatis harum corrupti adipisci id eligendi a optio.
-                </p>
-                <!-- <a href="#" class="btn btn-secondary">
-                    <span class="text text-1">Đặt bàn</span>
-                    <span class="text text-2" aria-hidden="true">Đặt bàn</span>
-                </a> -->
-                <a href="#" class="btn" id="btnBooking">Đặt bàn</a>
-                <div class="contactModal" id="contactModal">
-                    <div class="contactModal-content">
-                        <div style="justify-items: flex-end;"><button class="close-closeModal" id="CloseContactModal" style="align-items: end;">✖</button></div>
-                        
-                        <h3 id="contact-title">Chọn ứng dụng để nhắn tin</h3>
-                        <div class="options">
-                            <a href="https://zalo.me/0336667301" target="_blank" class="option zalo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
-                                <span>Zalo</span>
-                            </a>
-                            <a href="https://m.me/KGBINHDUONG" target="_blank" class="option messenger">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="Messenger">
-                                <span>Messenger</span>
-                            </a>
+        <article>
+            <section class="hero text-center" aria-label="home" id="home">
+
+                <ul class="hero-slider" data-hero-slider>
+
+                    <li class="slider-item active" data-hero-slider-item>
+
+                        <div class="slider-bg">
+                            <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt=""
+                                class="img-cover">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section about text-center" aria-labelledby="about-label" id="about">
-            <div class="container">
 
-                <div class="about-content">
+                        <p class="label-2 section-subtitle slider-reveal">Ẩm thực truyền thống</p>
 
-                    <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+                        <h1 class="display-1 hero-title slider-reveal">
+                            Vì tình yêu <br> với đồ ăn ngon
+                        </h1>
 
-                    <h2 class="headline-1 section-title" id="about-title">Về King's Grill</h2>
+                        <p class="body-2 hero-text slider-reveal">
+                            Hãy đến cùng gia đình để trải nghiệm những món ăn thật tuyệt
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal" id="menu-link">
+                            <span class="text text-1">Xem thực đơn</span>
+
+                            <span class="text text-2" aria-hidden="true">Xem thực đơn</span>
+                        </a>
+
+                    </li>
+
+                    <li class="slider-item" data-hero-slider-item>
+
+                        <div class="slider-bg">
+                            <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt=""
+                                class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">Trải nghiệm thú vị</p>
+
+                        <h1 class="display-1 hero-title slider-reveal">
+                            Hương vị lấy cảm hứng <br> từ ẩm thực truyền thống Việt Nam
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            Hãy đến cùng gia đình để trải nghiệm những món ăn thật tuyệt
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal" id="menu-link">
+                            <span class="text text-1">Xem thực đơn</span>
+
+                            <span class="text text-2" aria-hidden="true">Xem thực đơn</span>
+                        </a>
+
+                    </li>
+
+                    <li class="slider-item" data-hero-slider-item>
+
+                        <div class="slider-bg">
+                            <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt=""
+                                class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">Tuyệt vời và ngon</p>
+
+                        <h1 class="display-1 hero-title slider-reveal">
+                            Nơi mỗi hương vị <br> kể nên một câu chuyện
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            Hãy đến cùng gia đình để trải nghiệm những món ăn thật tuyệt
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal" id="menu-link">
+                            <span class="text text-1">Xem thực đơn</span>
+
+                            <span class="text text-2" aria-hidden="true">Xem thực đơn</span>
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+                    <ion-icon name="chevron-back"></ion-icon>
+                </button>
+
+                <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </button>
+            </section>
+
+
+            <section class="section service bg-black-10 text-center" aria-label="service" id="service">
+                <div class="container">
+
+                    <p class="section-subtitle label-2">Our space</p>
+
+                    <h2 class="headline-1 section-title">Về không gian</h2>
 
                     <p class="section-text">
-                        Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has
-                        been the industrys standard dummy text ever since the when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book It has survived
-                        not only five centuries, but also the leap into.
-                    </p>
+                        King's Grill mang đến quý khách hàng không gian sang trọng và ấm cúng càng làm cho bữa tiệc ẩm
+                        thực tại King's Grill thành một trải nghiệm khó quên cho mọi thực khách.
 
-                </div>
+                    <ul class="grid-list">
 
-                <figure class="about-banner">
+                        <li>
+                            <div class="service-card">
 
-                    <img src="./img/cp.jpg" width="570" height="570" loading="lazy"
-                        alt="about banner" class="w-100" data-parallax-item data-parallax-speed="1" style="object-fit: cover;">
+                                <a href="#" class="has-before hover:shine">
+                                    <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                        <img src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/402586350_754800920023881_1070405572649286679_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=3MrL49ay5CcQ7kNvgEd-5Yk&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=AbfrlcOIb66GH8XZeQQuz9J&oh=00_AYARWx577B52IVqnvunzvidCMlY23x7SkMMf6wjlcGWGtg&oe=67391D9F"
+                                            width="285" height="336" loading="lazy" alt="Breakfast" class="img-cover">
+                                    </figure>
+                                </a>
 
-                    <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-                        <img src="./img/img2.jpg" width="285" height="285" loading="lazy"
-                            alt="" class="w-100" style="object-fit: cover;">
-                    </div>
+                                <div class="card-content">
 
-                    <div class="abs-img abs-img-2 has-before">
-                        <img src="./img/badge-2.png" width="133" height="134" loading="lazy" alt="">
-                    </div>
+                                    <!-- <h3 class="title-4 card-title">
+                                        <a href="#">Breakfast</a>
+                                    </h3> -->
 
-                </figure>
-                <img src="./img/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="service-card">
+
+                                <a href="#" class="has-before hover:shine">
+                                    <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                        <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/462923151_968425895328048_6983913567413550733_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4y70LO_OTLgQ7kNvgGsMr9t&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=AF91HB92XuWK5aLtiLqmFHv&oh=00_AYBN5ONc7j3evhV4nCwA0J0FhOgtSk9LDypiNUIEjqstIg&oe=673913C0"
+                                            width="285" height="336" loading="lazy" alt="Appetizers" class="img-cover">
+                                    </figure>
+                                </a>
+
+                                <!-- <div class="card-content">
+
+                                        <h3 class="title-4 card-title">
+                                        <a href="#">Appetizers</a>
+                                    </h3>
+
+                                    <a href="#" class="btn-text hover-underline label-2" id="menu-link">Xem thực đơn</a>
+
+                                </div> -->
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="service-card">
+
+                                <a href="#" class="has-before hover:shine">
+                                    <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                        <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/465574851_983869840450320_2732654210837761319_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=efCCTnTQnlYQ7kNvgFFzn76&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=AQYRmOyvYNhnaz7f_EudZN2&oh=00_AYAYQTh931U6wAMVEAOY82rGtLOh6tlgEsCw4v4bPH0Q_Q&oe=6738EF72"
+                                            width="285" height="336" loading="lazy" alt="Drinks" class="img-cover">
+                                    </figure>
+                                </a>
+
+                                <!-- <div class="card-content">
+
+                                    <h3 class="title-4 card-title">
+                                        <a href="#">Drinks</a>
+                                    </h3>
+
+                                    <a href="#" class="btn-text hover-underline label-2" id="menu-link">View Menu</a>
+
+                                </div> -->
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
                         class="shape shape-1 move-anim">
-                <img src="./img/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+                    <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
                         class="shape shape-2 move-anim">
 
-                <!-- <img src="./img/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape"> -->
+                </div>
+            </section>
 
-            </div>
-        </section>
-        <div class="text-center" style="padding: 10px;color: whitesmoke;">
-            <div class="row">
-                <div class="col col-7">
-                    Toạ lạc tại trung tâm Thủ Dầu Một, Glow Beer Garden trở nên đặc biệt
-                    như một resort thu nhỏ giữa lòng thành phố. Là nơi kết nối những giá
-                    trị cuộc sống, thông qua các bữa ăn ngon đa dạng phong cánh ẩm thực
-                    từ Âu sang Á trong không gian mang phong cách Tropical Minimalist
-                    tươi mát hoà cùng chất hiện đại.
+            <section class="section about text-center" aria-labelledby="about-label" id="about">
+                <div class="container">
+
+                    <div class="about-content">
+
+                        <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+
+                        <h2 class="headline-1 section-title">Về King's Grill</h2>
+
+                        <p class="section-text">
+                            King's Grill nổi bật với các món nướng đặc sắc, nơi đầu bếp tài hoa sử dụng nguyên liệu tươi
+                            ngon và gia vị độc đáo, tạo nên hương vị đậm đà. Phong cách nấu nướng hiện đại kết hợp cùng
+                            truyền thống giúp thực khách vừa thưởng thức sự quen thuộc, vừa khám phá nét mới lạ trong
+                            từng món ăn.
+
+                        </p>
+
+                        <div class="contact-label">Liên hệ đặt bàn</div>
+
+                        <a href="tel:+84336667301" class="body-1 contact-number hover-underline">0336667 301</a>
+
+                        <!-- <a href="#" class="btn btn-primary">
+                            <span class="text text-1">Read More</span>
+
+                            <span class="text text-2" aria-hidden="true">Read More</span>
+                        </a> -->
+
+                    </div>
+
+                    <figure class="about-banner">
+
+                        <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.6435-9/101662195_804302689975681_8123210120965390336_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=K7Lhplw9D0IQ7kNvgE7Ed30&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=ABZL7o4muE7whEwqkrYn1y-&oh=00_AYCYVeX2RAD7kNzwWz04dGJIsND1p7eJwoDIQvVYtAU6Fg&oe=675AB219"
+                            width="570" height="570" loading="lazy" alt="about banner" class="w-100" data-parallax-item
+                            data-parallax-speed="1">
+
+                        <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+                            <img src="https://ghienbongda.vn/wp-content/uploads/2024/09/8e383b3e382b3e383b3e38395e382aae383b3e981b8e6898be382a8e38397e383ade383b32dsc07011-1024x683-1718079893324-1718079893710111638780-1718090158091-17180901585751813407605.webp"
+                                width="285" height="285" loading="lazy" alt="" class="w-100">
+                        </div>
+
+                        <div class="abs-img abs-img-2 has-before">
+                            <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+                        </div>
+
+                    </figure>
+
+                    <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+
                 </div>
-                <div class="col col-4">
-                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
+            </section>
+
+
+            <section class="special-dish text-center" aria-labelledby="dish-label">
+
+                <div class="special-dish-banner">
+                    <img src="https://lh3.googleusercontent.com/fife/ALs6j_FUc6uGNog4jht_WO7giEypl3JA2GtAeCiDH9xvFaG1zWUBOiCPhFPA2gFpRiHZ3H8Sfx8u02ngysvgK1wM8cZsZIwWWBSBn_wbQIXv01XPT-10R5kX8Oa7steqyNNg7QNb0coM2xK-xM81Gf8frJRhPuZSg_Z8JXZbBANLOflyOteLGN2hgtgjV7eAZ1J0-U9TJnTyHXQFh5XtRgjBFNqcMJm5obEjdkOxYvdRDAC4ywOv0yiz5OdoCqpdcw3XaUH-AjrPuNrzz0GMZeEWYiNGaCjwX-dHg-HB04I31a9I80QvlzdSIeVXONBDqU2Awkf3Viq8m8Nfphfk-TYU_PaHI-uKuXokZiyRRdlHEDG1Bk__Ce95bFg3Zuid8yULMrQONHAimw_u4WVXIxgKQ8CCxnEo18FVtzr8DXmrBprT3tKNcvTesVeHR6LZOM2SHdoDPxR4-ZvgkIv-NQYMtwqFWg7h5mvyAwudBSsyTljDOu0b6MCqzhHO2BoVAeeJz0XM07k0BoEUO4HeU_frzupRC7xfZCZwrxc7PR2kKxt1Yz21SCNlCCqznp3pKI5424toIXR4AAVj8mkPA9frXtoeExFCyqZ_4tAEZK782agRGO2NejIBZyMi6NbdY0obIfjmNedqPkq5rEzl1e9NhyuNbbIKipZFVv7Y9-YK6lIqXasolP6MlDzTHjpoNI86KO18hjAY9hvNtIv5jrOg7MminOiIPOjd9M-7hBsIKqJut4DeAJs6Yb-PXlIg1I-leorJf9HWq8OjTSitaeF6mw0JEt64U-MgXJNfOjn6KKHQlLlqkLSatYDKikzNlYvSn_ZCqUhzqLYCNs1teyUy2M3Dm43R3xzYUKnT6Lss9hqQVBIyZL8bexImpN9Y5Cf8bQ8U8vkMVsPnZtf2ECClpjXVVDKZyBvE_D7emxMEKHXcAuMUey9MbAt3L87aVxsZPUEktstPsoxadJrv2J8o_JLfaoBRFiTBpWEGLfL_UZ_zDDrGePQNECjutb6-Dq1SRgbgc5XeX8X0oI2Xl5kgZVXovEl9XG9h64W7eRsSZgZlG7q1gDRZcDIZyuLzxN6suehZ4ckr6AIGlLdjBMEe9vF2BMqb-ZS3YfNjucbNQ1JKNveI249SR_AUx3xCWxnG-j-a2bMKkwMIE68MDOHOWyxSXy4qMHtc0_VH1OsPUp0wnPiZYNF3t6LOW8znAHit-szzS08jVp_0m4u7z68fby-xJB6jJlw7PtOR4-z0Q-ok5shcWoW95_4BfHhAcJw6mMVn7WYELZs_QubssdQu9c8g2q4IrX-AwZ1D1ilee9QFORbORyBV94JDvoarpyRa6NaDe_DQ6nlyrzULMh6vwHwpyU2eQo7yoL8-pdBF_abB-M1B4qWw7UeokqGronxHY8srxL8b01vdatm2YlRVXJfZKpFGTiilYhSXJKS5gr2S_ZGRZRpFYmLHydBpWP2rLuoO8SirOhz15FWg437w6DFkubYHTRskcxW-PdSneU-PHaVqSYcjYU7vbC86wKrc3af5_L5ZTMDhTsJe75X1dVRoxhbO6x-Ek-KONJXtVJNuWvztNNPd4pAvuxeVYf_tQCFF3V3B0ezXcrkTM9rYnHqI0KSn8i455BowsXZuLaGhmdoJKSm4hQg=w1920-h911"
+                        width="940" height="900" loading="lazy" alt="special dish" class="img-cover">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col col-4">
-                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
-                </div>
-                <div class="col col-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum neque, consequuntur placeat eius molestias obcaecati molestiae id ducimus soluta? Soluta ea, molestias at sed exercitationem cupiditate deleniti quam aliquam! Distinctio.
-                </div>
-                <div class="col col-4">
-                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-8">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus veritatis illum, consectetur velit libero officia ad architecto reprehenderit unde sequi, veniam porro id delectus error adipisci exercitationem fugiat provident incidunt.<br />
-                    lorem ipsum dolor
-                </div>
-                <div class="col col-4">
-                    <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
-                </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-4">
-                    <div>
-                        <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
-                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel accusantium rerum facere facilis rem adipisci placeat eveniet molestiae commodi..</span>
+
+                <div class="special-dish-content bg-black-10">
+                    <div class="container">
+
+                        <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge"
+                            class="abs-img">
+
+                        <p class="section-subtitle label-2">Đặc sản</p>
+
+                        <h2 class="headline-1 section-title">Gà nướng King's Grill</h2>
+
+                        <p class="section-text">
+                            Gà nướng King's Grill thấm sốt mật ong thơm ngọt, da giòn rụm, thịt mềm ngọt, kết hợp cùng
+                            gia vị đặc trưng tạo nên hương vị đậm đà và hấp dẫn.
+                        </p>
+
+
+                        <a href="#" class="btn btn-primary" id="menu-link">
+                            <span class="text text-1">Xem menu</span>
+
+                            <span class="text text-2" aria-hidden="true">Xem menu</span>
+                        </a>
+
                     </div>
                 </div>
-                <div class="col col-lg-4">
-                    <div>
-                        <img class="img-fluid" src="./img/image.jpg" alt="hinh anh" />
-                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus tempore ullam eius blanditiis, facere quos, tempora quaerat libero nisi voluptatibus neque earum sunt! Et cumque eum laudantium deserunt doloribus eveniet!</span>
+
+                <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt=""
+                    class="shape shape-1">
+
+                <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt=""
+                    class="shape shape-2">
+
+            </section>
+
+
+
+            <!-- 
+        - #TESTIMONIALS
+      -->
+
+            <section class="section testi text-center has-bg-image" style="background-image: url('')"
+                aria-label="testimonials">
+                <div class="container">
+
+                    <div class="quote"></div>
+
+                    <p class="headline-2 testi-text">
+                        ❝ Thank you for choosing us. ❞
+                    </p>
+
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+
+
+
+            <!-- 
+        - #RESERVATION
+      -->
+
+            <section class="reservation" id="contact">
+                <div class="container">
+
+                    <div class="form reservation-form bg-black-10">
+
+                        <form action="" class="form-left">
+
+                            <h2 class="headline-1 text-center">Đặt bàn online</h2>
+
+                            <p class="form-text text-center">
+                                Hãy liên hệ chúng tôi qua
+                            </p>
+
+                            <!-- <div class="input-wrapper">
+                                <input type="text" name="name" placeholder="Your Name" autocomplete="off"
+                                    class="input-field">
+
+                                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off"
+                                    class="input-field">
+                            </div>
+
+                            <div class="input-wrapper">
+
+                                <div class="icon-wrapper">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                                    <select name="person" class="input-field">
+                                        <option value="1-person">1 Person</option>
+                                        <option value="2-person">2 Person</option>
+                                        <option value="3-person">3 Person</option>
+                                        <option value="4-person">4 Person</option>
+                                        <option value="5-person">5 Person</option>
+                                        <option value="6-person">6 Person</option>
+                                        <option value="7-person">7 Person</option>
+                                    </select>
+
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+
+                                <div class="icon-wrapper">
+                                    <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                                    <input type="date" name="reservation-date" class="input-field">
+
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+
+                                <div class="icon-wrapper">
+                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                                    <select name="person" class="input-field">
+                                        <option value="08:00am">08 : 00 am</option>
+                                        <option value="09:00am">09 : 00 am</option>
+                                        <option value="010:00am">10 : 00 am</option>
+                                        <option value="011:00am">11 : 00 am</option>
+                                        <option value="012:00am">12 : 00 am</option>
+                                        <option value="01:00pm">01 : 00 pm</option>
+                                        <option value="02:00pm">02 : 00 pm</option>
+                                        <option value="03:00pm">03 : 00 pm</option>
+                                        <option value="04:00pm">04 : 00 pm</option>
+                                        <option value="05:00pm">05 : 00 pm</option>
+                                        <option value="06:00pm">06 : 00 pm</option>
+                                        <option value="07:00pm">07 : 00 pm</option>
+                                        <option value="08:00pm">08 : 00 pm</option>
+                                        <option value="09:00pm">09 : 00 pm</option>
+                                        <option value="10:00pm">10 : 00 pm</option>
+                                    </select>
+
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+
+                            </div>
+
+                            <textarea name="message" placeholder="Message" autocomplete="off"
+                                class="input-field"></textarea> -->
+                            <div>
+                                <button type="button" class="btn btn-secondary" onclick="window.open('https://m.me/KGBINHDUONG', '_blank')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                                        <path d="M 25 2 C 12.300781 2 2 11.601563 2 23.5 C 2 29.800781 4.898438 35.699219 10 39.800781 L 10 48.601563 L 18.601563 44.101563 C 20.699219 44.699219 22.800781 44.898438 25 44.898438 C 37.699219 44.898438 48 35.300781 48 23.398438 C 48 11.601563 37.699219 2 25 2 Z M 27.300781 30.601563 L 21.5 24.398438 L 10.699219 30.5 L 22.699219 17.800781 L 28.601563 23.699219 L 39.101563 17.800781 Z"></path>
+                                    </svg>
+                                    <span class="text text-1">FACEBOOK MESSENGER</span>
+                                    <span class="text text-2" aria-hidden="true">Đặt bàn</span>
+                                </button>
+                                
+                                <button type="button" class="btn btn-secondary" onclick="window.open('https://zalo.me/0336667301', '_blank')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                        viewBox="0 0 50 50">
+                                        <path
+                                            d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 15.580078 6 C 12.00899 9.7156859 10 14.518083 10 19.5 C 10 24.66 12.110156 29.599844 15.910156 33.339844 C 16.030156 33.549844 16.129922 34.579531 15.669922 35.769531 C 15.379922 36.519531 14.799687 37.499141 13.679688 37.869141 C 13.249688 38.009141 12.97 38.430859 13 38.880859 C 13.03 39.330859 13.360781 39.710781 13.800781 39.800781 C 16.670781 40.370781 18.529297 39.510078 20.029297 38.830078 C 21.379297 38.210078 22.270625 37.789609 23.640625 38.349609 C 26.440625 39.439609 29.42 40 32.5 40 C 36.593685 40 40.531459 39.000731 44 37.113281 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 33 15 C 33.55 15 34 15.45 34 16 L 34 25 C 34 25.55 33.55 26 33 26 C 32.45 26 32 25.55 32 25 L 32 16 C 32 15.45 32.45 15 33 15 z M 18 16 L 23 16 C 23.36 16 23.700859 16.199531 23.880859 16.519531 C 24.050859 16.829531 24.039609 17.219297 23.849609 17.529297 L 19.800781 24 L 23 24 C 23.55 24 24 24.45 24 25 C 24 25.55 23.55 26 23 26 L 18 26 C 17.64 26 17.299141 25.800469 17.119141 25.480469 C 16.949141 25.170469 16.960391 24.780703 17.150391 24.470703 L 21.199219 18 L 18 18 C 17.45 18 17 17.55 17 17 C 17 16.45 17.45 16 18 16 z M 27.5 19 C 28.11 19 28.679453 19.169219 29.189453 19.449219 C 29.369453 19.189219 29.65 19 30 19 C 30.55 19 31 19.45 31 20 L 31 25 C 31 25.55 30.55 26 30 26 C 29.65 26 29.369453 25.810781 29.189453 25.550781 C 28.679453 25.830781 28.11 26 27.5 26 C 25.57 26 24 24.43 24 22.5 C 24 20.57 25.57 19 27.5 19 z M 38.5 19 C 40.43 19 42 20.57 42 22.5 C 42 24.43 40.43 26 38.5 26 C 36.57 26 35 24.43 35 22.5 C 35 20.57 36.57 19 38.5 19 z M 27.5 21 C 27.39625 21 27.29502 21.011309 27.197266 21.03125 C 27.001758 21.071133 26.819727 21.148164 26.660156 21.255859 C 26.500586 21.363555 26.363555 21.500586 26.255859 21.660156 C 26.148164 21.819727 26.071133 22.001758 26.03125 22.197266 C 26.011309 22.29502 26 22.39625 26 22.5 C 26 22.60375 26.011309 22.70498 26.03125 22.802734 C 26.051191 22.900488 26.079297 22.994219 26.117188 23.083984 C 26.155078 23.17375 26.202012 23.260059 26.255859 23.339844 C 26.309707 23.419629 26.371641 23.492734 26.439453 23.560547 C 26.507266 23.628359 26.580371 23.690293 26.660156 23.744141 C 26.819727 23.851836 27.001758 23.928867 27.197266 23.96875 C 27.29502 23.988691 27.39625 24 27.5 24 C 27.60375 24 27.70498 23.988691 27.802734 23.96875 C 28.487012 23.82916 29 23.22625 29 22.5 C 29 21.67 28.33 21 27.5 21 z M 38.5 21 C 38.39625 21 38.29502 21.011309 38.197266 21.03125 C 38.099512 21.051191 38.005781 21.079297 37.916016 21.117188 C 37.82625 21.155078 37.739941 21.202012 37.660156 21.255859 C 37.580371 21.309707 37.507266 21.371641 37.439453 21.439453 C 37.303828 21.575078 37.192969 21.736484 37.117188 21.916016 C 37.079297 22.005781 37.051191 22.099512 37.03125 22.197266 C 37.011309 22.29502 37 22.39625 37 22.5 C 37 22.60375 37.011309 22.70498 37.03125 22.802734 C 37.051191 22.900488 37.079297 22.994219 37.117188 23.083984 C 37.155078 23.17375 37.202012 23.260059 37.255859 23.339844 C 37.309707 23.419629 37.371641 23.492734 37.439453 23.560547 C 37.507266 23.628359 37.580371 23.690293 37.660156 23.744141 C 37.739941 23.797988 37.82625 23.844922 37.916016 23.882812 C 38.005781 23.920703 38.099512 23.948809 38.197266 23.96875 C 38.29502 23.988691 38.39625 24 38.5 24 C 38.60375 24 38.70498 23.988691 38.802734 23.96875 C 39.487012 23.82916 40 23.22625 40 22.5 C 40 21.67 39.33 21 38.5 21 z">
+                                        </path>
+                                    </svg>
+                                    <span class="text text-1">ZALO</span>
+
+                                    <span class="text text-2" aria-hidden="true">Đặt bàn</span>
+                                </button>
+                            </div>
+
+
+                        </form>
+
+                        <div class="form-right text-center"
+                            style="background-image: url('./assets/images/form-pattern.png')">
+
+                            <h2 class="headline-1 text-center">Liên hệ</h2>
+
+                            <p class="contact-label">Yêu cầu đặt bàn</p>
+
+                            <a href="tel:+8436667301" class="body-1 contact-number hover-underline">0336 667 301</a>
+
+                            <div class="separator"></div>
+
+                            <p class="contact-label">Địa chỉ</p>
+
+                            <address class="body-4">
+                                34 Hoàng Văn Thụ, Chánh Nghĩa <br>
+                                Thủ Dầu Một, Bình Dương
+                            </address>
+
+                            <p class="contact-label">Thời gian hoạt động</p>
+
+                            <p class="body-4">
+                                Từ thứ hai đến chủ nhật <br> Từ 16:00 đến 23:30
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </article>
     </main>
 
-    <footer>
-        <div class="footer-section">
-            <h3 id="footer-description-title">King's Grill Restaurant</h3>
-            <p id="footer-description-content">.........</p>
-        </div>
-        <div class="footer-section">
-            <h3>Thông tin liên hệ</h3>
-            <p id="opening-hours">Thời gian hoạt động: 16PM - 0AM</p>
-            <p id="address">
-                Địa chỉ: 34 Đường Hoàng Văn Thụ, Chánh Nghĩa, Thủ Dầu Một, Bình Dương
-            </p>
-            <p id="phone">Số điện thoại: +84 907 010 424</p>
-            <p id="email">Email: booking@kingsgrill.vn</p>
-        </div>
-        <div class="footer-section">
-            <h3>Bản đồ</h3>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.831571415351!2d106.66207381168607!3d10.97608258914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d12ffdb33b65%3A0x25ca14f40f0af9f!2zS2luZ-KAmXMgR3JpbGw!5e0!3m2!1sen!2s!4v1730781398962!5m2!1sen!2s"
-                width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+    <footer class="footer section has-bg-image text-center"
+        style="background-image: url('./assets/images/footer-bg.jpg')">
+        <div class="container">
+
+            <div class="footer-top grid-list">
+
+                <div class="footer-brand has-before has-after">
+
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
+                    </a>
+
+                    <address class="body-4">
+                        34 Hoàng Văn Thụ - Chánh Nghĩa - Thủ Dầu Một - Bình Dương
+                    </address>
+
+                    <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@kingsgrill.vn</a>
+
+                    <a href="tel:+88123123456" class="body-4 contact-link">Đặt bàn : 0336 667 301</a>
+
+                    <p class="body-4">
+                        Hoạt động: Từ 16:00 đến 23:30
+                    </p>
+
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" id="home">Trang chủ</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" id="menu">Thực đơn</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" id="about">Về chúng tôi</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" id="gallery">Thư viện</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline" id="contact">Liên hệ</a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+                    </li>
+                    <!-- 
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+                    </li> -->
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p class="copyright">
+                    &copy; 2024 King's Grill Restaurant<br>Mọi quyền được bảo lưu<br>
+                    <br> Created by <a href="https://daomintam.github.io/" target="_blank" class="link">MT</a>
+                </p>
+            </div>
         </div>
     </footer>
-    <script type="text/javascript">
-
-    </script><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/ionicons.esm.js"></script>
+    <script nomodule src="./assets/js/ionicons.js"></script>
 
 </body>
 
