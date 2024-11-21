@@ -1,21 +1,63 @@
 'use strict';
+let currentLang = 'vi';
+function setLanguage(languageCode) {
+    const elements = document.querySelectorAll('[data-translate]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (languageData[key] && languageData[key][languageCode]) {
+            if (element.tagName.toLowerCase() === 'div' || element.tagName.toLowerCase() === 'p') {
+                // Nếu phần tử có thể chứa HTML, dùng innerHTML
+                element.innerHTML = languageData[key][languageCode];  
+            } else {
+                // Nếu phần tử chỉ chứa văn bản, dùng innerText và thay thế <br> bằng ký tự xuống dòng
+                const textWithBreaks = languageData[key][languageCode].replace(/<br>/g, '\n');
+                element.innerText = textWithBreaks;
+            }
+        }
+    });
+    
+    currentLang = languageCode;
+}
+
+document.getElementById('vi-language').addEventListener('click', () => setLanguage('vi'));
+document.getElementById('en-language').addEventListener('click', () => setLanguage('en'));
+document.getElementById('zh-language').addEventListener('click', () => setLanguage('zh'));
+
 const preloader = document.querySelector("[data-preaload]");
 
 window.addEventListener("load", function() {
     preloader.classList.add("loaded");
     document.body.classList.add("loaded");
 });
-let currentLang = 'vi';
+
+
+function openMenuModal(){
+    let url;
+    if (currentLang === 'vi') {
+        url = "https://kingsgrill.vn/menu/vi/index.html";
+    } else if (currentLang === 'en') {
+        url = "https://kingsgrill.vn/menu/en/index.html";
+    } else if (currentLang === 'zh') {
+        url = "https://kingsgrill.vn/menu/zh/index.html";
+    }
+
+    document.querySelector("#menuModal iframe").src = url;
+    document.getElementById("menuModal").style.display = "flex";
+}
+
+document.getElementById('menu-link').addEventListener('click', () => openMenuModal());
+
 document.getElementById("menu-link").addEventListener("click", function (event) {
     event.preventDefault();
     
     let url;
     if (currentLang === 'vi') {
-        url = "https://kingsgrill.vn/";
+        url = "https://kingsgrill.vn/menu/vi/index.html";
     } else if (currentLang === 'en') {
-        url = "https://kingsgrill.vn/en";
+        url = "https://kingsgrill.vn/menu/en/index.html";
     } else if (currentLang === 'zh') {
-        url = "https://kingsgrill.vn/zh";
+        url = "https://kingsgrill.vn/menu/zh/index.html";
     }
 
     document.querySelector("#menuModal iframe").src = url;

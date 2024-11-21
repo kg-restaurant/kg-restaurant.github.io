@@ -141,6 +141,73 @@ address {
     font-style: normal;
 }
 
+.customCheckBoxHolder {
+    margin: 5px;
+    display: inline;
+  }
+  
+  .customCheckBox {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px 8px;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 0px;
+    color: rgba(255, 255, 255, 0.7);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 300ms;
+    transition-property: color, background-color, box-shadow;
+    display: inline;
+    height: 32px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+    outline: none;
+    justify-content: center;
+    min-width: 55px;
+  }
+  
+  .customCheckBox:hover {
+    background-color: #2c2c2c;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+  }
+  
+  .customCheckBox .inner {
+    font-size: 18px;
+    font-weight: 900;
+    pointer-events: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 300ms;
+    transition-property: transform;
+    transform: translateY(0px);
+  }
+  
+  .customCheckBox:hover .inner {
+    transform: translateY(-2px);
+  }
+  
+  .customCheckBoxWrapper:first-of-type .customCheckBox {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: 0px;
+  }
+  
+  .customCheckBoxWrapper:last-of-type .customCheckBox {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 0px;
+  }
+  
+  .customCheckBoxInput {
+    display: none;
+  }
+  
+  .customCheckBoxWrapper .customCheckBox:hover .inner {
+    transform: translateY(-2px);
+  }
+
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -178,7 +245,7 @@ body.nav-active {
 }
 .close-modal {
     position: absolute;
-    top: 10px;
+    top: -5px;
     right: 10px;
     background: #ffce25;
     border: none;
@@ -201,7 +268,7 @@ body.nav-active {
 
 .modal-content {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 80%;
     background-color: rgba(255, 255, 255, 0%);
     padding: 20px;
@@ -1586,6 +1653,13 @@ textarea.input-field {
     text-decoration: underline;
 }
 
+.btn-changeLanguage {
+    position: initial;
+    bottom: 0px;
+}
+
+
+
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
@@ -1627,7 +1701,29 @@ textarea.input-field {
 /**
  * responsive for larger than 575px screen
  */
+ @media (max-width: 475px) {
+    .btn-changeLanguage {
+        position: sticky;
+        bottom: 20px;
+        color: var(--smoky-black-1);
+        font-size: 22px;
+        border-radius: var(--radius-circle);
+        display: flex;
+        place-items: center;
+        opacity: 1;
+        z-index: 4;
+        align-content: space-between;
+        align-items: flex-end;
+        justify-content: center;
+        flex-wrap: auto;
+        align-content: space-around;
+        align-items: stretch;
+    }
 
+    .header.active{
+        padding-block: 0px;
+    }
+ }
 @media (min-width: 575px) {
     /**
    * CUSTOM PROPERTY
@@ -1649,6 +1745,7 @@ textarea.input-field {
     .contact-number {
         --fontSize-body-1: 3rem;
     }
+    
     /**
    * TOPBAR
    */
@@ -1714,6 +1811,11 @@ textarea.input-field {
     .hero-btn {
         transform: scale(0.7);
     }
+
+    .customCheckBoxHolder{
+        display: inline;
+    }
+    
     /**
    * SERVICE
    */
@@ -1796,6 +1898,9 @@ textarea.input-field {
  */
 
 @media (min-width: 768px) {
+    .customCheckBoxHolder{
+        display: inline;
+    }
     /**
    * REUSED STYLE
    */
@@ -1881,6 +1986,9 @@ textarea.input-field {
      * spacing
      */
         --section-space: 100px;
+    }
+    .customCheckBoxHolder{
+        display: none;
     }
     /**
    * REUSED STYLE
@@ -2014,6 +2122,9 @@ textarea.input-field {
      * typography
      */
         --fontSize-title-2: 2.5rem;
+    }
+    .customCheckBoxHolder{
+        display: inline;
     }
     /**
    * REUSED STYLE
@@ -2155,6 +2266,9 @@ textarea.input-field {
    */
     .navbar {
         margin-inline: auto;
+    }
+    .customCheckBoxHolder{
+        display: inline;
     }
     /**
    * ABOUT
